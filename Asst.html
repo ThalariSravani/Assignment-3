@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<title>
+Assignment
+</title>
+</head>
+<body>
+<script>
+function addNumbers() {
+    let num1 = Number(prompt("Enter first number:"));
+    let num2 = Number(prompt("Enter second number:"));
+    alert(`Sum: ${num1 + num2}`);
+}
+
+function multiplyNumbers() {
+    let num1 = Number(prompt("Enter first number:"));
+    let num2 = Number(prompt("Enter second number:"));
+    alert(`Product: ${num1 * num2}`);
+}
+
+function subtractNumbers() {
+    let num1 = Number(prompt("Enter first number:"));
+    let num2 = Number(prompt("Enter second number:"));
+    alert(`Difference: ${num1 - num2}`);
+}
+
+function divideNumbers() {
+    let num1 = Number(prompt("Enter first number:"));
+    let num2 = Number(prompt("Enter second number:"));
+    if (num2 !== 0) {
+        alert(`Quotient: ${num1 / num2}`);
+    } else {
+        alert("Error: Division by zero.");
+    }
+}
+
+function remainderNumbers() {
+    let num1 = Number(prompt("Enter first number:"));
+    let num2 = Number(prompt("Enter second number:"));
+    if (num2 !== 0) {
+        alert(`Remainder: ${num1 % num2}`);
+    } else {
+        alert("Error: Division by zero.");
+    }
+}
+
+function main() {
+    while (true) {
+        let choice = prompt(
+            "Menu\n1. Add\n2. Multiply\n3. Subtract\n4. Divide\n5. Remainder\n6. Exit\nEnter your choice (1-6):"
+        );
+
+        switch (choice) {
+            case "1":
+                addNumbers();
+                break;
+            case "2":
+                multiplyNumbers();
+                break;
+            case "3":
+                subtractNumbers();
+                break;
+            case "4":
+                divideNumbers();
+                break;
+            case "5":
+                remainderNumbers();
+                break;
+            case "6":
+                alert("Exiting...");
+                return;
+            default:
+                alert("Invalid choice. Please choose again.");
+        }
+    }
+}
+
+main();
+</script>
+</body>
+</html>
+
+
